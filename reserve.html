@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="./assets/css/globals.css" />
   </head>
   <body class="font-[Arsenal]">
-    <header class="pt-6 w-full h-[110vh] bg-no-repeat bg-cover bg-left bg-fixed" style="background-image: url('./assets/images/Background.png')">
+    <header
+      class="pt-6 w-full h-[110vh] bg-no-repeat bg-cover bg-left bg-fixed"
+      style="background-image: url('./assets/images/Background.png')"
+    >
       <div
         class="bg-slate-50/20 flex justify-between items-center w-[92%] h-[11%] mx-auto px-4 rounded-full"
       >
@@ -27,61 +30,52 @@
         </div>
 
         <nav
-          class="nav-links  text-white md:static absolute md:bg-transparent md:min-h-fit min-h-[35vh] left-[8%] bottom-[100%] md:w-auto w-[85%] flex items-center px-5"
+          class="nav-links text-white md:static absolute md:bg-transparent md:min-h-fit min-h-[35vh] left-[8%] bottom-[100%] md:w-auto w-[85%] flex items-center px-5"
         >
           <ul
             class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5"
           >
-          <li><a class="hover:text-[#15211B]" href="#">Home</a></li>
-          <li><a class="hover:text-[#15211B]" href="#">Reservation</a></li>
-          <li><a class="hover:text-[#15211B]" href="#">About</a></li>
-          <li><a class="hover:text-[#15211B]" href="#">Contact Us</a></li>
+            <li><a class="hover:text-[#15211B]" href="#">Home</a></li>
+            <li><a class="hover:text-[#15211B]" href="#">Reservation</a></li>
+            <li><a class="hover:text-[#15211B]" href="#">About</a></li>
+            <li><a class="hover:text-[#15211B]" href="#">Contact Us</a></li>
           </ul>
         </nav>
 
-        <div class="flex items-center ">
-         <!-- <div class=" mt-16 ">
-          <button class=" m  h-8  w-15" id="collapsibleNavbar"> 
-            <ion-icon class="" name="basket-outline"></ion-icon> 
-          </button>
-            <div class="bg-white py-2">
-             <a href="lkjds">klsdjfjkdsjlksdjdkflkl</a>
-             <a href="lkjds">klsdjfjkdsjlksdjdkflkl</a>
-             <a href="lkjds">klsdjfjkdsjlksdjdkflkl</a>
-             <a href="lkjds">klsdjfjkdsjlksdjdkflkl</a>
-             <a href="lkjds">klsdjfjkdsjlksdjdkflkl</a>
-             <a href="lkjds">klsdjfjkdsjlksdjdkflkl</a>
-            </div>
-         </div> -->
-        
+        <div class="flex items-center">
+          <div class="relative" data-te-dropdown-ref>
+            <button
+              class="flex items-center text-2xl whitespace-nowrap rounded bg-primary px-6 pb-2 pt-2.5 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+              type="button"
+              id="dropdownMenuButton1d"
+            >
+              <ion-icon name="basket-outline"></ion-icon>
+            </button>
+            <ul
+              class="absolute hidden z-[1000] float-right m-2 min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+              id="MenuButton1d"
+            >
+              <li class="flex justify-evenly gap-4 items-center px-2">
+                <p
+                  class="count-item block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200"
+                >
+                  0 item
+                </p>
+                <ion-icon
+                  class="text-2xl cursor-pointer close-dropdown"
+                  name="close-outline"
+                ></ion-icon>
+              </li>
+              <hr
+                class="my-2 h-0 border border-t-0 border-solid border-neutral-700 opacity-25 dark:border-neutral-200"
+              />
 
-         <div class="relative" data-te-dropdown-ref>
-          <button
-            class="flex items-center text-2xl whitespace-nowrap rounded bg-primary px-6 pb-2 pt-2.5  font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-            type="button"
-            id="dropdownMenuButton1d"
-          >
-          <ion-icon name="basket-outline"></ion-icon>
-          <div class="absolute  inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 right-0 dark:border-gray-900">20</div> 
-          </button>
-          <ul
-            class="absolute hidden z-[1000] float-right m-2 min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
-            id="MenuButton1d"
-           >
-           <li class="flex justify-evenly gap-4 items-center px-2">
-             <p
-             class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700  disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-             
-             
-             >Separated link</p>
-             <ion-icon class="text-2xl cursor-pointer close-dropdown" name="close-outline"></ion-icon>
-            </li>
-            <hr
-              class="my-2 h-0 border border-t-0 border-solid border-neutral-700 opacity-25 dark:border-neutral-200" />
-          </ul>
-        </div>
-
-
+              <div id="list-panier">
+                <p class="mx-2">cart is Empty</p>
+                <!-- list items -->
+              </div>
+            </ul>
+          </div>
 
           <div class="relative text-gray-600">
             <input
@@ -158,137 +152,146 @@
       </div>
     </header>
 
-
-
-
-
-    <main class="bg-[#121212] ">
+    <main class="bg-[#121212]">
       <section class="container mx-auto py-6">
-           
         <div class="flex justify-evenly my-14">
-          <button class="btn-filter py-2 px-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75" name="voiture Particulier">voiture Particulier</button>
-          <button class="btn-filter py-2 px-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"  name="voiture Utilitaire">voiture Utilitaire</button>
-          <button class="btn-filter py-2 px-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"  name="voiture de Lux">voiture de Lux</button>
-          <span 
-          class="btn-remove hidden light bg-primary text-center h-9 w-9 items-center justify-center rounded text-white bg-rose-500 hover:bg-rose-700  cursor-pointer  focus:ring-rose-400 focus:ring-opacity-75"
-        >
-         
-        <ion-icon class="py-2"  name="trash-outline"></ion-icon>
-        </span>
-        
+          <button
+            class="btn-filter py-2 px-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"
+            name="voiture Particulier"
+          >
+            voiture Particulier
+          </button>
+          <button
+            class="btn-filter py-2 px-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"
+            name="voiture Utilitaire"
+          >
+            voiture Utilitaire
+          </button>
+          <button
+            class="btn-filter py-2 px-4 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"
+            name="voiture de Lux"
+          >
+            voiture de Lux
+          </button>
+          <span
+            class="btn-remove hidden light bg-primary text-center h-9 w-9 items-center justify-center rounded text-white bg-rose-500 hover:bg-rose-700 cursor-pointer focus:ring-rose-400 focus:ring-opacity-75"
+          >
+            <ion-icon class="py-2" name="trash-outline"></ion-icon>
+          </span>
         </div>
-
-
 
         <div class="flex gap-5 justify-center mb-10">
           <span
-            class="light bg-primary flex h-9 w-9 items-center justify-center rounded text-white bg-[#152E22] icons cursor-pointer  "
+            class="light bg-primary flex h-9 w-9 items-center justify-center rounded text-white bg-[#152E22] icons cursor-pointer"
           >
-           
-          <ion-icon  name="menu-outline"></ion-icon>
+            <ion-icon name="menu-outline"></ion-icon>
           </span>
           <span
             class="light bg-primary flex h-9 w-9 items-center justify-center rounded text-white bg-[#152E22] icons cursor-pointer"
           >
-            <ion-icon  name="grid-outline"></ion-icon>
+            <ion-icon name="grid-outline"></ion-icon>
           </span>
         </div>
-        <div id="cards"
-          class=" grid lg:grid-cols-3 justify-center md:grid-cols-3 sm:grid-cols-2 md:-mx-1 lg:-mx-4 gap-5 pb-8"
+        <div
+          id="cards"
+          class="grid lg:grid-cols-3 justify-center md:grid-cols-3 sm:grid-cols-2 md:-mx-1 lg:-mx-4 gap-5 pb-8"
+        ></div>
+
+        <div
+          class="text-center section-pagination"
+          aria-label="Page navigation"
         >
-          
-        </div>
-
-        <div class="text-center section-pagination  " aria-label="Page navigation">
           <ul class="inline-flex pagination gap-4">
-
-                                                                         <!-- pagination -->
+            <!-- pagination -->
           </ul>
         </div>
       </section>
-
- 
     </main>
 
-
-
-
-
-
-
-    
-<!-- Modal toggle -->
-<div id="default-modal" tabindex="-1" aria-hidden="true" class="fixed Modal hidden  z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-  <div class="fixed inset-0 bg-gray-500 opacity-60 bg-opacity-75 transition-opacity close-modal"></div>
-  <div class="relative z-10 w-full   max-w-2xl max-h-full top-[10%] left-[20%] ">
+    <!-- Modal toggle -->
+    <div
+      id="default-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed Modal hidden z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div
+        class="fixed inset-0 bg-gray-500 opacity-60 bg-opacity-75 transition-opacity close-modal"
+      ></div>
+      <div
+        class="relative z-10 w-full max-w-2xl max-h-full top-[10%] left-[20%]"
+      >
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Modal header -->
-            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                <div class="mr-auto">
-                  <img
-                  class="h-40 object-cover rounded-xl img-modal"
-                  src="./assets/images/voiture.png"
-                  alt="voiture"
+          <!-- Modal header -->
+          <div
+            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+          >
+            <div class="mr-auto">
+              <img
+                class="h-40 object-cover rounded-xl img-modal"
+                src="./assets/images/voiture.png"
+                alt="voiture"
+              />
+            </div>
+            <button
+              type="button"
+              class="close-modal text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                 />
-                </div>
-                <button type="button" class="close-modal text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" >
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-6">
+            <div class="flex justify-between items-center text-white">
+              <h2 class="font-bold text-3xl marke-modal">${element.make}</h2>
+              <span class="text-4xl price-modal">18£</span>
             </div>
-            <!-- Modal body -->
-            <div class="p-6 space-y-6">
-                <div class="flex justify-between items-center text-white">
-                  <h2 class="font-bold text-3xl marke-modal">${element.make}</h2>
-                  <span class="text-4xl price-modal">18£</span>
-                </div>
-                <h3 class="name-modal"></h3>
-                   <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 discription-modal">
-                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                </p>
-
-
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button  data-index-number=""  type="button" class="apply-car text-white  bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-700 dark:focus:ring-green-800">I accept</button>
-                <button  type="button" class="close-modal text-gray-500 bg-red-600 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-200 text-sm font-medium px-5 py-2.5 hover:text-red-900 focus:z-10 dark:bg-red-700 dark:text-gray-300 dark:border-red-500 dark:hover:text-white dark:hover:bg-rose-600 dark:focus:ring-rose-600">Decline</button>
-            </div>
+            <h3 class="name-modal"></h3>
+            <p
+              class="text-base leading-relaxed text-gray-500 dark:text-gray-400 discription-modal"
+            >
+              With less than a month to go before the European Union enacts new
+              consumer privacy laws for its citizens, companies around the world
+              are updating their terms of service agreements to comply.
+            </p>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+          >
+            <button
+              data-index-number=""
+              type="button"
+              class="apply-car text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            >
+              I accept
+            </button>
+            <button
+              type="button"
+              class="close-modal text-gray-500 bg-red-600 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-200 text-sm font-medium px-5 py-2.5 hover:text-red-900 focus:z-10 dark:bg-red-700 dark:text-gray-300 dark:border-red-500 dark:hover:text-white dark:hover:bg-rose-600 dark:focus:ring-rose-600"
+            >
+              Decline
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer class="px-4 divide-y bg-[#15211B] text-white">
       <div
