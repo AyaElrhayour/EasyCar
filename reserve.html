@@ -24,7 +24,7 @@
       >
         <div>
           <img
-            src="./assets/images/logo1-removebg-preview (1) 1.png"
+            src="./assets/images/logo.png"
             alt="log"
           />
         </div>
@@ -70,10 +70,26 @@
                 class="my-2 h-0 border border-t-0 border-solid border-neutral-700 opacity-25 dark:border-neutral-200"
               />
 
-              <div id="list-panier">
+              <div id="list-panier" class="max-h-screen overflow-y-auto ">
                 <p class="mx-2">cart is Empty</p>
                 <!-- list items -->
               </div>
+
+              <hr
+              class="my-2 h-0 border border-t-0 border-solid border-neutral-700 opacity-25 dark:border-neutral-200"
+            />
+
+            <li class=" flex justify-evenly gap-4 items-center px-2">
+              <p
+                class=" block w-full mr-auto whitespace-nowrap bg-transparent px-1 py-1 text-sm font-normal text-neutral-700 disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200"
+              >
+                total: <span class="count-Total">0 $</span>
+              </p>
+
+
+             <a href="./devie.html" class="devis hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-0.5 px-0.5 rounded">devis</a>
+            
+            </li>
             </ul>
           </div>
 
@@ -116,13 +132,13 @@
         class="flex mt-24 w-full bg-gradient-to-b from-black/20 from-70% to black/90 to-90%"
       >
         <div
-          class="flex flex-col gap-9 justify-center md:w-[50%] w-[60%] mx-20"
+          class="flex flex-col gap-9 justify-center md:w-[50%] w-[70%] mx-20"
         >
           <h1 class="md:text-7xl text-6xl text-white font-semibold top-0">
             Secure Your Spot for the Ultimate Driving Adventure!
           </h1>
           <div
-            class="bg-[#3E4330]/20 py-3 flex justify-evenly rounded-2xl text-white text-xl font-medium h-20"
+            class="bg-[#3E4330]/20 md:py-3  w-full  flex justify-evenly rounded-2xl text-white md:text-xl text-sm font-medium h-20"
           >
             <div class="flex justify-evenly items-center">
               <ion-icon name="location-outline"></ion-icon>
@@ -133,18 +149,19 @@
             <div class="flex justify-around items-center">
               <ion-icon name="calendar-outline"></ion-icon>
               <select name="" id="" class="bg-transparent">
-                <option value="" selected>Pick-up date</option>
-                <option value="">jdsk</option>
-                <option value="">jdkjk</option>
+                <option class="disabled:bg-transparent bg-slate-600" value="" selected>Pick-up date</option>
+                <option class="disabled:bg-transparent bg-slate-600" value="">date 1</option>
+                <option class="disabled:bg-transparent bg-slate-600" value="">date 2</option>
+               
               </select>
             </div>
 
             <div class="flex justify-around items-center">
               <ion-icon name="calendar-outline"></ion-icon>
               <select class="bg-transparent" name="" id="">
-                <option value="" selected>Return date</option>
-                <option value="">Return date</option>
-                <option value="">Return date</option>
+                <option class="disabled:bg-transparent bg-slate-600"  value="" selected>Return date</option>
+                <option class="disabled:bg-transparent bg-slate-600" value="">date 1</option>
+                <option class="disabled:bg-transparent bg-slate-600" value="">date 2</option>
               </select>
             </div>
           </div>
@@ -304,7 +321,7 @@
             class="flex justify-center space-x-3 lg:justify-start"
           >
             <img
-              src="./assets/images/logo1-removebg-preview (1) 1.png"
+              src="./assets/images/logo.png"
               alt="logo"
             />
           </a>
@@ -314,20 +331,26 @@
         >
           <div class="space-y-3">
             <h3 class="tracki uppercase dark:text-gray-50">Quick Links</h3>
-            <ul class="space-y-1">
-              <li>
-                <a rel="noopener noreferrer" href="#">Home</a>
-              </li>
-              <li>
-                <a rel="noopener noreferrer" href="#">About</a>
-              </li>
-              <li>
-                <a rel="noopener noreferrer" href="#">Reservation</a>
-              </li>
-              <li>
-                <a rel="noopener noreferrer" href="#">Contact</a>
-              </li>
-            </ul>
+            <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5"
+          >
+            <li>
+              <a class="hover:text-[#15211B]" href="./index.html">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#15211B]" href="reserve.html"
+                >Reservation</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#15211B]" href="about.html">About</a>
+            </li>
+            <li>
+              <a class="hover:text-[#15211B]" href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
           </div>
           <div class="space-y-3">
             <div class="uppercase dark:text-gray-50">Find Us On :</div>
@@ -401,6 +424,9 @@
         &copy; All Copy Rights Are Reserved.
       </div>
     </footer>
+
+
+    
     <script src="./assets/js/index.js"></script>
 
     <script

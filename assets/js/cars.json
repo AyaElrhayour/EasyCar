@@ -5,8 +5,8 @@
       "make": "Toyota",
       "name": "Corolla",
       "description": "The Toyota Corolla is a compact car renowned for its reliability and impressive fuel efficiency. It's a practical choice for those seeking a dependable daily driver.",
-      "image": "./assets/images/voiture.png",
-      "price": "$20,000",
+      "image": "./assets/images/toyota.jpg",
+      "price": "20,000",
       "category": "voiture Particulier"
     },
     {
@@ -14,8 +14,8 @@
       "make": "Honda",
       "name": "Civic",
       "description": "The Honda Civic is a popular compact car known for its exceptional quality and performance. With a strong reputation, it's a favorite among drivers seeking a well-rounded vehicle.",
-      "image": "./assets/images/voiture.png",
-      "price": "$22,000",
+      "image": "./assets/images/honda.jpg",
+      "price": "22,000",
       "category": "voiture Particulier"
     },
     {
@@ -23,8 +23,8 @@
       "make": "Ford",
       "name": "Mustang",
       "description": "The Ford Mustang is an iconic American muscle car celebrated for its powerful performance and timeless design. It's a symbol of American automotive heritage.",
-      "image": "./assets/images/voiture.png",
-      "price": "$45,000",
+      "image": "./assets/images/ford.jpg",
+      "price": "45,000",
       "category": "voiture de Lux"
     },
     {
@@ -32,8 +32,8 @@
       "make": "Chevrolet",
       "name": "Silverado",
       "description": "The Chevrolet Silverado is a rugged pickup truck designed for demanding work and utility. It's a reliable partner for those with heavy-duty tasks.",
-      "image": "./assets/images/voiture.png",
-      "price": "$30,000",
+      "image": "./assets/images/chevrolet.jpg",
+      "price": "30,000",
       "category": "voiture Utilitaire"
     },
     {
@@ -41,8 +41,8 @@
       "make": "Volkswagen",
       "name": "Golf",
       "description": "The Volkswagen Golf is a versatile hatchback with European flair in its design. It offers a practical and stylish driving experience.",
-      "image": "./assets/images/voiture.png",
-      "price": "$24,000",
+      "image": "./assets/images/golf.jpg",
+      "price": "24,000",
       "category": "voiture Particulier"
     },
     {
@@ -50,8 +50,8 @@
       "make": "BMW",
       "name": "3 Series",
       "description": "The BMW 3 Series is a luxury compact sedan known for its sporty handling and premium features. It's a choice for those who appreciate performance and elegance.",
-      "image": "./assets/images/voiture.png",
-      "price": "$40,000",
+      "image": "./assets/images/bmw.jpg",
+      "price": "40,000",
       "category": "voiture de Lux"
     },
     {
@@ -59,8 +59,8 @@
       "make": "Nissan",
       "name": "Altima",
       "description": "The Nissan Altima is a midsize sedan valued for its comfort and advanced technology. It's a sensible option for daily commuting and long journeys.",
-      "image": "./assets/images/voiture.png",
-      "price": "$26,000",
+      "image": "./assets/images/nissan.jpg",
+      "price": "26,000",
       "category": "voiture Particulier"
     },
     {
@@ -68,8 +68,8 @@
       "make": "Mercedes-Benz",
       "name": "E-Class",
       "description": "The Mercedes-Benz E-Class is an executive sedan that combines advanced features with timeless style. It's a statement of luxury and sophistication.",
-      "image": "./assets/images/voiture.png",
-      "price": "$55,000",
+      "image": "./assets/images/mercedes.jpg",
+      "price": "55,000",
       "category": "voiture de Lux"
     },
     {
@@ -77,8 +77,8 @@
       "make": "Audi",
       "name": "Q5",
       "description": "The Audi Q5 is a premium compact SUV with a luxurious interior and advanced technology. It offers a refined and comfortable driving experience.",
-      "image": "./assets/images/voiture.png",
-      "price": "$42,000",
+      "image": "./assets/images/audi.jpg",
+      "price": "42,000",
       "category": "voiture de Lux"
     },
     {
@@ -86,8 +86,8 @@
       "make": "Lexus",
       "name": "RX",
       "description": "The Lexus RX is a luxury crossover SUV known for its smooth ride and high-quality materials. It's a symbol of opulence and comfort.",
-      "image": "./assets/images/voiture.png",
-      "price": "$50,000",
+      "image": "./assets/images/lexus.jpg",
+      "price": "50,000",
       "category": "voiture de Lux"
     },
     {
@@ -95,8 +95,8 @@
       "make": "Tesla",
       "name": "Model S",
       "description": "The Tesla Model S is an electric sedan featuring cutting-edge technology and exhilarating acceleration. It's a pioneer in the world of electric vehicles.",
-      "image": "./assets/images/voiture.png",
-      "price": "$80,000",
+      "image": "./assets/images/tesla.jpg",
+      "price": "80,000",
       "category": "voiture Particulier"
     },
     {
@@ -104,8 +104,8 @@
       "make": "Hyundai",
       "name": "Elantra",
       "description": "The Hyundai Elantra is a compact car that combines an attractive price with good value. It's a budget-friendly choice without compromising on quality.",
-      "image": "./assets/images/voiture.png",
-      "price": "$18,000",
+      "image": "./assets/images/hyundai.jpg",
+      "price": "18,000",
       "category": "voiture Particulier"
     },
     {
@@ -113,8 +113,8 @@
       "make": "Subaru",
       "name": "Outback",
       "description": "The Subaru Outback is a rugged crossover with all-wheel drive and outdoor appeal. It's an excellent companion for adventures off the beaten path.",
-      "image": "./assets/images/voiture.png",
-      "price": "$28,000",
+      "image": "./assets/images/subaru.jpg",
+      "price": "28,000",
       "category": "voiture Utilitaire"
     },
     {
@@ -122,8 +122,8 @@
       "make": "Kia",
       "name": "Sorento",
       "description": "The Kia Sorento is a midsize SUV with a spacious interior and an impressive warranty. It's a family-friendly vehicle with practicality in mind.",
-      "image": "./assets/images/voiture.png",
-      "price": "$32,000",
+      "image": "./assets/images/kia.jpg",
+      "price": "32,000",
       "category": "voiture Particulier"
     },
     {
@@ -131,8 +131,8 @@
       "make": "Mazda",
       "name": "MX-5 Miata",
       "description": "The Mazda MX-5 Miata is a fun and sporty convertible that offers a responsive and engaging driving experience. It's a driver's delight on winding roads.",
-      "image": "./assets/images/voiture.png",
-      "price": "$25,000",
+      "image": "./assets/images/mazda.jpg",
+      "price": "25,000",
       "category": "voiture Particulier"
     },
     {
@@ -140,8 +140,8 @@
       "make": "Jeep",
       "name": "Wrangler",
       "description": "The Jeep Wrangler is an iconic off-road SUV with a rugged and adventurous spirit. It's the go-to choice for those who love off-roading and exploration.",
-      "image": "./assets/images/voiture.png",
-      "price": "$35,000",
+      "image": "./assets/images/jeep.jpg",
+      "price": "35,000",
       "category": "voiture Utilitaire"
     },
     {
@@ -149,8 +149,8 @@
       "make": "Porsche",
       "name": "911",
       "description": "The Porsche 911 is a high-performance sports car with a rich history in the world of motorsport. It's a symbol of precision engineering and exhilarating speed.",
-      "image": "./assets/images/voiture.png",
-      "price": "$95,000",
+      "image": "./assets/images/porsche.jpg",
+      "price": "95,000",
       "category": "voiture de Lux"
     },
     {
@@ -158,8 +158,8 @@
       "make": "Ferrari",
       "name": "488 GTB",
       "description": "The Ferrari 488 GTB is a supercar known for its extreme speed and distinctive Italian styling. It's a dream car for those who crave unparalleled performance and luxury.",
-      "image": "./assets/images/voiture.png",
-      "price": "$300,000",
+      "image": "./assets/images/ferrari.jpg",
+      "price": "300,000",
       "category": "voiture de Lux"
     }
   ]

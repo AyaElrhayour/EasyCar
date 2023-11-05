@@ -32,7 +32,7 @@ function featchCard(data) {
   let endpage = limitpage * page - 1;
   const styleCalss =
     icon == "grid-outline"
-      ? "grid lg:grid-cols-3 justify-center md:grid-cols-3 sm:grid-cols-2 md:-my-1 lg:-mr-12 gap-6 pb-8"
+      ? "grid lg:grid-cols-3 justify-center md:grid-cols-3 sm:grid-cols-2 md:-my-1  gap-6 pb-8"
       : "flex flex-col gap-3 justify-center ml-50 pb-8";
 
   cards.innerHTML = "";
@@ -48,13 +48,16 @@ function featchCard(data) {
             : "flex flex-row w-4/5"
         } ">
         <img
-          class="h-40 object-cover rounded-xl"
+          class="h-40  object-cover w-full rounded-xl"
           src="${element.image}"
           alt="voiture"
         />
         <div class="card-detail ">
         <div class="p-2">
           <h2 class="font-bold text-lg">${element.make}</h2>
+          <h3 class="mb-1 text-xl font-medium text-gray-900 ">${
+            element.name
+          }</h3>
           
           <p class="text-sm text-gray-600">
           ${element.description}
@@ -62,7 +65,7 @@ function featchCard(data) {
         </div>
     
         <div class="m-2">
-        <button onclick="addToCart(${
+        <button onclick="addToModal(${
           element.id
         })" class="py-1 px-3 bg-[#15211B] text-white font-semibold rounded-lg shadow-md ${
         icon !== "grid-outline" ? "w-full" : ""
@@ -136,11 +139,11 @@ const btnRemove = document.querySelector(".btn-remove");
 const applyCar = document.querySelector(".apply-car");
 const countItem = document.querySelector(".count-item");
 
-const listPanier = document.querySelector("#list-panier");
+let listPanier = document.querySelector("#list-panier");
 
-const localData = [];
+const countTotal = document.querySelector(".count-Total");
 
-function addToCart(items) {
+function addToModal(items) {
   const infoCar = dataCar.find((car) => car.id === items);
   modal.classList.remove("hidden");
   console.log(infoCar);
@@ -177,43 +180,100 @@ closeDropdown.addEventListener("click", function () {
   menuButton1d.classList.add("hidden");
 });
 
+const localData = JSON.parse(localStorage.getItem("car-personalization")) || [];
+
 applyCar.addEventListener("click", function () {
   const idCar = this.dataset.indexNumber;
   const car = dataCar.find((item) => item.id == idCar);
+
   localData.push(car);
   localStorage.setItem("car-personalization", JSON.stringify(localData));
-
-  const lengthLocal = JSON.parse(localStorage.getItem("car-personalization"));
-
-  countItem.textContent = `${lengthLocal.length} item`;
-
-  
-  if (lengthLocal.length > 0) {
-    dropDown.insertAdjacentHTML(
-      "beforeend",
-      ` <div class="absolute  inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 right-0 dark:border-gray-900">${lengthLocal.length}</div> `
-    );
-
-   
-    listPanier.innerHTML=""
-    lengthLocal.forEach((item) => {
-     
-      listPanier.insertAdjacentHTML(
-        "afterbegin", 
-        `  <li class="flex items-center gap-2 px-2 py-4">
-
-       
-               
-       <img src="${item.image}" alt="Car Image" class="w-10 h-10">
-
-       <div class="flex justify-between items-center gap-3 w-full">
-           <span class="text-sm font-medium text-neutral-900">${item.name}</span>
-           <ion-icon class="text-red-500 text-lg cursor-pointer hover:text-red-600"name="close-circle-outline"></ion-icon>
-       </div>
-   </li>`
-      );
-    });
-  }
+  addToCart();
 
   modal.classList.add("hidden");
 });
+
+let total = 0;
+
+
+function addToCart() {
+  countItem.textContent = `${localData.length} item`;
+
+  console.log(localData);
+  dropDown.insertAdjacentHTML(
+    "beforeend",
+    ` <div class="absolute  inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 right-0 dark:border-gray-900">${localData.length}</div> `
+  );
+  if (localData.length > 0) {
+    listPanier.innerHTML = "";
+    localData.forEach((item) => {
+      listPanier.insertAdjacentHTML(
+        "afterbegin",
+        `  <li class="flex items-center gap-2 px-2 py-4">
+
+       
+        
+        <img src="${item.image}" alt="Car Image" class="w-10 h-10">
+        
+        <div class="flex justify-between items-center gap-3 w-full">
+           <span class="text-sm font-medium text-neutral-900">${item.name}</span>
+           <ion-icon onclick="removeItem(${item.id})" class="text-red-500 text-lg cursor-pointer hover:text-red-600"name="close-circle-outline"></ion-icon>
+           </div>
+   </li>`
+      );
+    });
+
+    localData.forEach((item) => {
+      total += parseInt(item.price); 
+    });
+    
+    countTotal.textContent=total
+
+    toggleDevis()
+    
+  } else {
+
+  
+    listPanier.innerHTML = "";
+
+    listPanier.insertAdjacentHTML(
+      "afterbegin",
+      `   <p class="mx-2">cart is Empty</p>`
+    );
+  }
+}
+
+addToCart();
+function removeItem(id) {
+  const index = localData.findIndex((item) => item.id === id);
+  localData.forEach((item) => {
+    total -= parseInt(item.price); 
+    
+  });
+  
+  countTotal.textContent=total
+  
+  console.log(index);
+  if (index !== -1) {
+    localData.splice(index, 1);
+
+    localStorage.setItem("car-personalization", JSON.stringify(localData));
+
+    addToCart();
+
+  }    toggleDevis()
+}
+
+
+const toggleDevis=()=>{
+  const devis=document.querySelector(".devis")
+
+  console.log(devis);
+
+  if (total>0) {
+    devis.classList.remove("hidden")
+  }else{
+    devis.classList.add("hidden")
+  }
+
+}

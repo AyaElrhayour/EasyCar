@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>devis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="flex justify-between p-5">
+      <div>
+        <h1 class="font-bold text-6xl">Devis</h1>
+        <p class="font-semibold">valable 2 mois</p>
+      </div>
+      <div>
+        <img src="./assets/images/logoblack.png" alt="" />
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <div class="flex flex-wrap justify-center">
+          <div class="relative overflow-x-auto">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
+                <tr>
+                  <th scope="col" class="px-6 py-3">DESCRIPTION</th>
+                  <th scope="col" class="px-6 py-3">JOURS</th>
+                  <th scope="col" class="px-6 py-3">UNIT PRICE</th>
+                  <th scope="col" class="px-6 py-3">AMOUNT</th>
+                  <th scope="col" class="px-6 py-3">DATE du fin</th>
+                  <th scope="col" class="px-6 py-3">DATE du fin</th>
+                </tr>
+              </thead>
+              <tbody>
+                                    <!-- tr  -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <div class="flex justify-between p-20">
+        <div>
+         <button type="button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 rounded" id="pdf">imprimer</button></div>
+        <div>
+          <p class="text-xl font-semibold" >TOTAL HT: <span id="total-ht"></span></p>
+          <p class="text-xl font-semibold" >TVA 20%: <span id="tva"></span> </p>
+          <p class="text-xl font-semibold" >TOTAL TTC: <span id="total-ttc"></span> </p>
+        </div>
+      </div>
+     
+    </main>
+
+    <script src="./assets/js/devis.js"></script>
+  </body>
+</html>
