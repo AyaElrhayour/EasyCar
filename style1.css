@@ -1,0 +1,96 @@
+body{
+    background: #000;
+}
+.per img{
+position: relative;
+left: 25%;
+ width: 50%;
+}
+.button-btn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 9%;
+    width: 15%;
+}
+
+#btn-green{
+    margin: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background: green;
+}
+#btn-red {
+    margin: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background: red;
+}
+#btn-black{
+    margin: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: black;
+}
+#btn-brown {
+    margin: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background: brown;
+}
+#btn-blue{
+    margin: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background: blue;
+}
+#btn-white {
+    margin: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background: white;
+}
+#btn:nth-child(3){
+    border-radius: 0px 60px 60px 0px;
+}
+#btn-btn{
+    text-align: center;
+    width: 10rem;
+    border: 2px solid #fff;
+}
+
+#btn-color{
+    border: 2px solid #fff;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#btn-option{
+    border: 2px solid #fff;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
