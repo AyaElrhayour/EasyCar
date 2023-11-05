@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>about</title>
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <section
-      class="text-white md:bg-center bg-cover bg-no-repeat h-screen w-screen"
-      style="background-image: url(imagesAbout/image.khaleejtimes.jpg)"
+      class="text-white bg-[url(imagesAbout/image.khaleejtimes.jpg)] bg-center bg-cover bg-no-repeat h-screen"
     >
       <header class="pt-6">
         <div
-          class="bg-slate-50/20 flex justify-between items-center w-[92%] h-[11%] mx-auto p-4 rounded-full"
+          class="bg-slate-50/20 flex justify-between items-center w-[92%] h-[13vh] mx-auto px-4 rounded-full"
         >
           <div>
-            <img src="imagesAbout/logo.png" alt="log" />
+            <img src="./imagesAbout/logo.png" alt="log" />
           </div>
 
           <nav
-            class="nav-links text-white md:static absolute md:bg-transparent md:min-h-fit min-h-[15vh] left-[8%] bottom-[100%] md:w-auto w-[85%] flex items-center px-5"
+            class="nav-links text-white md:static absolute md:bg-transparent md:min-h-fit min-h-[35vh] left-[8%] bottom-[100%] md:w-auto w-[85%] flex items-center px-5"
           >
             <ul
               class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5"
@@ -32,7 +32,41 @@
             </ul>
           </nav>
 
-          <div class="flex items-center gap-6">
+          <div class="flex items-center">
+            <div class="relative" data-te-dropdown-ref>
+              <button
+                class="flex items-center text-2xl whitespace-nowrap rounded bg-primary px-6 pb-2 pt-2.5 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                type="button"
+                id="dropdownMenuButton1d"
+              >
+                <ion-icon name="basket-outline"></ion-icon>
+              </button>
+              <ul
+                class="absolute hidden z-[1000] float-right m-2 min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                id="MenuButton1d"
+              >
+                <li class="flex justify-evenly gap-4 items-center px-2">
+                  <p
+                    class="count-item block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200"
+                  >
+                    0 item
+                  </p>
+                  <ion-icon
+                    class="text-2xl cursor-pointer close-dropdown"
+                    name="close-outline"
+                  ></ion-icon>
+                </li>
+                <hr
+                  class="my-2 h-0 border border-t-0 border-solid border-neutral-700 opacity-25 dark:border-neutral-200"
+                />
+
+                <div id="list-panier" class="max-h-screen overflow-y-auto">
+                  <p class="mx-2">cart is Empty</p>
+                  <!-- list items -->
+                </div>
+              </ul>
+            </div>
+
             <div class="relative text-gray-600">
               <input
                 type="search"
@@ -62,7 +96,7 @@
               </button>
             </div>
             <ion-icon
-              onclick="Menu(this)"
+              onclick="ontoggleMenu(this)"
               name="menu-outline"
               class="text-3xl cursor-pointer md:hidden"
             ></ion-icon>
@@ -73,7 +107,9 @@
       <div class="h-screen flex items-center justify-center">
         <div class="text-center flex flex-col justify-evenly h-auto gap-[7rem]">
           <h1 class="md:text-7xl text-4xl font-semibold">About us</h1>
-          <a class="bg-black rounded-2xl py-1 px-5 mx-auto" href="#"
+          <a
+            class="bg-gradient-to-t from-white/40 to-black/20 rounded-2xl py-2 px-5 mx-auto"
+            href="#"
             >en savoir plus</a
           >
         </div>
@@ -84,15 +120,15 @@
         <h2 class="text-4xl font-semibold text-center">Our Mission</h2>
         <div class="md:flex md:flex-row items-center">
           <!-- For medium and larger screens, display the image on the left -->
-          <div class="w-full md:w-2/5">
+          <div class="h-60 md:md:w-2/5">
             <img
-              class="w-full rounded-xl"
+              class="h-60 md:rounded-xl"
               src="imagesAbout/Car-Hero_1920x800.webp"
               alt="car-image"
             />
           </div>
 
-          <div class="w-full md:w-3/5 p-4">
+          <div class="h-60 md:md:w-3/5 p-4">
             <p class="md:text-lg text-sm">
               La qualité comme système de travail, la transformant en processus
               de travail complets Support technique et commercial dans tout
@@ -107,51 +143,57 @@
         </div>
       </section>
 
-      <section
-        class="bg-black text-white h-auto md:h-screen flex flex-col justify-around"
-      >
+      <section class="bg-black text-white md:h-96 flex flex-col justify-evenly">
         <h2 class="text-2xl md:text-4xl font-semibold text-center md:mt-0">
           Our team
         </h2>
         <div
-          class="flex flex-col md:flex-row items-center justify-center md:justify-evenly mt-4"
+          class="px-1 flex flex-wrap flex-col md:flex-row items-center justify-center md:justify-evenly mt-4"
         >
           <div class="flex flex-col items-center mb-8 md:mb-0">
-            <img
-              class="w-80 h-48 md:w-48 md:h-48 rounded-xl"
-              src="imagesAbout/ceo.jpg"
-              alt=""
-            />
+            <div class="w-72 h-52">
+              <img
+                class="md:w-full rounded-xl h-full"
+                src="imagesAbout/ceo.jpg"
+                alt=""
+              />
+            </div>
             <h3 class="mt-2 md:mt-4 text-center text-sm md:text-base">
               CEO Name<br />Founder & CEO
             </h3>
           </div>
           <div class="flex flex-col items-center mb-8 md:mb-0">
-            <img
-              class="w-80 h-48 md:w-48 md:h-48 rounded-xl"
-              src="imagesAbout/ledeas.jpg"
-              alt=""
-            />
+            <div class="w-72 h-52">
+              <img
+                class="md:w-full rounded-xl h-full"
+                src="imagesAbout/ledeas.jpg"
+                alt=""
+              />
+            </div>
             <h3 class="mt-2 md:mt-4 text-center text-sm md:text-base">
               Leader Name<br />Founder & CEO
             </h3>
           </div>
           <div class="flex flex-col items-center mb-8 md:mb-0">
-            <img
-              class="w-80 h-48 md:w-48 md:h-48 rounded-xl"
-              src="imagesAbout/employee.webp"
-              alt=""
-            />
+            <div class="w-72 h-52">
+              <img
+                class="md:w-full rounded-xl h-full"
+                src="imagesAbout/employee.webp"
+                alt=""
+              />
+            </div>
             <h3 class="mt-2 md:mt-4 text-center text-sm md:text-base">
               Employee Name<br />Founder & CEO
             </h3>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              class="w-80 h-48 md:w-48 md:h-48 rounded-xl"
-              src="imagesAbout/employyee.jpg"
-              alt=""
-            />
+          <div class="flex flex-col items-center mb-8 md:mb-0">
+            <div class="w-72 h-52">
+              <img
+                class="md:w-full rounded-xl h-full"
+                src="imagesAbout/employee.webp"
+                alt=""
+              />
+            </div>
             <h3 class="mt-2 md:mt-4 text-center text-sm md:text-base">
               Employee Name<br />Founder & CEO
             </h3>
@@ -159,14 +201,16 @@
         </div>
       </section>
 
-      <section class="bg-black text-white p-5 gap-y-12">
+      <section
+        class="bg-black text-white md:p-5 py-5 md:gap-y-12 pl-10 timeline"
+      >
         <h2 class="text-4xl font-semibold text-center mb-10">Our Community</h2>
-        <div
-          class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
-        >
-          <!-- Item #1 -->
 
-          <!-- Icon -->
+        <div
+          class="my-2 space-y-8 md:relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5"
+        >
+          <div class="timeline-img"></div>
+          <!-- Item #1 -->
 
           <!-- Card -->
           <div
@@ -186,40 +230,41 @@
                 </p>
               </div>
               <img
-                class="w-32 h-24 md:w-48 md:h-32 rounded-xl"
+                class="w-32 h-24 md:w-full md:h-32 rounded-xl"
+                style="width: 50% !important"
                 src="imagesAbout/Car-Hero_1920x800.webp"
                 alt=""
               />
             </div>
           </div>
         </div>
-
-        <!-- Item #2 -->
         <div
-          class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+          class="my-2 space-y-8 md:relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
         >
-          <!-- Icon -->
+          <!-- Item #2 -->
 
           <!-- Card -->
           <div
             class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-green-900 p-4 rounded shadow"
           >
+            <div class="timeline-img"></div>
             <div
               class="flex flex-col md:flex-row-reverse items-center justify-between space-y-2 md:space-y-0 space-x-0 md:space-x-2 gap-3"
             >
               <div class="text-center md:text-left">
                 <h3 class="font-bold text-slate-50 text-lg md:text-xl">
-                  Fleet Size: 500+ vehicles
+                  Employees: 50+
                 </h3>
                 <p class="text-sm md:text-base text-slate-50">
-                  Ranging from compact cars to spacious SUVs. We regularly
-                  update our inventory to offer you the latest models and the
-                  best selection to suit your needs.
+                  Our dedicated team is composed of more than 50 passionate
+                  professionals who are committed to ensuring that your rental
+                  car experience is exceptiona.
                 </p>
               </div>
               <img
-                class="w-32 h-24 md:w-48 md:h-32 rounded-xl"
-                src="imagesAbout/Car-Hero_1920x800.webp"
+                class="w-32 h-24 md:w-full md:h-32 rounded-xl"
+                style="width: 50% !important"
+                src="imagesAbout/Man-receiving-rental-car-keys-from-woman.webp"
                 alt=""
               />
             </div>
@@ -227,32 +272,33 @@
         </div>
 
         <div
-          class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+          class="space-y-8 md:relative before:absolute before:inset-0 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5"
         >
-          <!-- Item #1 -->
-
-          <!-- Icon -->
+          <!-- Item #3 -->
 
           <!-- Card -->
           <div
-            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-green-900 p-4 rounded shadow"
+            class="my-2 w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-green-900 p-4 rounded shadow"
           >
+            <div class="timeline-img"></div>
             <div
               class="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0 space-x-0 md:space-x-2 mb-4"
             >
               <div class="text-center md:text-left">
                 <h3 class="font-bold text-slate-50 text-lg md:text-xl">
-                  Fleet Size: 500+ vehicles
+                  Community Involvement:
                 </h3>
                 <p class="text-sm md:text-base text-slate-50">
-                  Ranging from compact cars to spacious SUVs. We regularly
-                  update our inventory to offer you the latest models and the
-                  best selection to suit your needs.
+                  We are deeply involved in our local communities, actively
+                  participating in events, environmental initiatives, and
+                  charitable activities to contribute to the betterment of the
+                  areas we serve.
                 </p>
               </div>
               <img
-                class="w-32 h-24 md:w-48 md:h-32 rounded-xl"
-                src="imagesAbout/Car-Hero_1920x800.webp"
+                class="w-32 h-24 md:w-full md:h-32 rounded-xl"
+                style="width: 50% !important"
+                src="imagesAbout/ireland-car-rental-12M4414-2.jpg"
                 alt=""
               />
             </div>
@@ -260,40 +306,43 @@
         </div>
         <!-- Item #4 -->
         <div
-          class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+          class="my-2 space-y-8 md:relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
         >
-          <!-- Icon -->
-
           <!-- Card -->
           <div
             class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-green-900 p-4 rounded shadow"
           >
+            <div class="timeline-img"></div>
             <div
               class="flex flex-col md:flex-row-reverse items-center justify-between space-y-2 md:space-y-0 space-x-0 md:space-x-2 gap-3"
             >
               <div class="text-center md:text-left">
                 <h3 class="font-bold text-slate-50 text-lg md:text-xl">
-                  Fleet Size: 500+ vehicles
+                  Customers : 1000 +
                 </h3>
                 <p class="text-sm md:text-base text-slate-50">
-                  Ranging from compact cars to spacious SUVs. We regularly
-                  update our inventory to offer you the latest models and the
-                  best selection to suit your needs.
+                  Over the years, we have had the pleasure of serving thousands
+                  of satisfied customers who have trusted us with their car
+                  rental needs
                 </p>
               </div>
               <img
-                class="w-32 h-24 md:w-48 md:h-32 rounded-xl"
-                src="imagesAbout/Car-Hero_1920x800.webp"
+                class="w-32 h-24 md:w-full md:h-32 rounded-xl"
+                style="width: 50% !important"
+                src="imagesAbout/rental-car.jpg"
                 alt=""
               />
             </div>
           </div>
         </div>
       </section>
-      <section class="bg-black text-white flex flex-col items-center gap-4 p-4">
+      <section
+        class="bg-black text-white h-screen flex flex-col items-center justify-evenly p-4"
+      >
         <h2 class="text-4xl font-semibold">Our location</h2>
-        <div>
+        <div class="w-3/4 h-80">
           <iframe
+            class="w-full h-full"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28726.643207776768!2d-73.63048905858642!3d45.51624249849807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bb28fcc04bd%3A0x88a165a67144ba45!2sGlobe%20Location%20Auto%20et%20Camion!5e0!3m2!1sfr!2sma!4v1699019752773!5m2!1sfr!2sma"
             style="border: 0"
             allowfullscreen=""
@@ -302,10 +351,13 @@
           ></iframe>
         </div>
       </section>
-      <section class="bg-black text-white flex flex-col items-center gap-4 p-4">
-        <h2 class="text-4xl font-semibold">Our location</h2>
-        <div >
+      <section
+        class="bg-black text-white h-screen flex flex-col items-center justify-evenly p-4"
+      >
+        <h2 class="text-4xl font-semibold">Our Video</h2>
+        <div class="w-3/4 h-80">
           <iframe
+            class="w-full h-full"
             src="https://www.youtube.com/embed/uoNtUcuQPDw?si=oMYU4dHcWw0Y6Sqv"
             title="YouTube video player"
             frameborder="0"
@@ -420,5 +472,14 @@
         &copy; All Copy Rights Are Reserved.
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
