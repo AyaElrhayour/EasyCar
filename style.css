@@ -1,0 +1,42 @@
+.timeline {
+
+    position: relative;
+
+    &::before {
+        content: '';
+        background: #fff;
+        width: 5px;
+        height: 85%;
+        margin-top: 7%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-img {
+    width: 30px;
+    height: 30px;
+    background: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+@media screen and (max-width:767px) {
+    .timeline {
+        &::before {
+
+            left: 20px;
+            margin-top: 13%;
+        }
+    }
+
+    .timeline-img {
+
+        left: 20px;
+
+    }
+}
